@@ -4,22 +4,87 @@
     android:id="@+id/navigation"
     app:startDestination="@id/mainFragment">
 
+    <!--    MAIN    -->
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.asystentnauczyciela.fragments.MainFragment"
-        android:label="UserFragment" >
+        android:name="com.example.asystentnauczyciela.fragments.MainFragment">
         <action
-            android:id="@+id/action_mainFragment_to_studentsFragment"
-            app:destination="@id/studentsFragment" />
+            android:id="@+id/action_mainFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_subjectsFragment"
+            app:destination="@id/subjectsFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
 
+    <!--    ADD STUDENT   -->
     <fragment
-        android:id="@+id/studentsFragment"
-        android:name="com.example.asystentnauczyciela.fragments.MainFragment"
-        android:label="UserFragment" >
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.asystentnauczyciela.fragments.AddStudentFragment">
         <action
-            android:id="@+id/action_mainFragment_to_studentsFragment"
+            android:id="@+id/action_addStudentFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!--    ADD SUBJECT   -->
+    <fragment
+        android:id="@+id/addSubjectFragment"
+        android:name="com.example.asystentnauczyciela.fragments.AddSubjectFragment">
+        <action
+            android:id="@+id/action_addSubjectFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!--    SETTINGS   -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.asystentnauczyciela.fragments.SettingsFragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <!--    SUBJECTS   -->
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="com.example.asystentnauczyciela.fragments.SubjectsFragment">
+        <action
+            android:id="@+id/action_subjectsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+
+        <action
+            android:id="@+id/action_subjectsFragment_to_subjectInfoFragment"
+            app:destination="@id/subjectInfoFragment" />
+    </fragment>
+
+    <!--    SUBJECT INFO   -->
+    <fragment
+        android:id="@+id/subjectInfoFragment"
+        android:name="com.example.asystentnauczyciela.fragments.SubjectInfoFragment">
+        <action
+            android:id="@+id/action_subjectInfoFragment_to_subjectsFragment"
+            app:destination="@id/subjectsFragment" />
+
+        <action
+            android:id="@+id/action_subjectInfoFragment_to_subjectStudentGradesFragment"
+            app:destination="@id/subjectStudentGradesFragment" />
+    </fragment>
+
+    <!--    SUBJECT STUDENT GRADES   -->
+    <fragment
+        android:id="@+id/subjectStudentGradesFragment"
+        android:name="com.example.asystentnauczyciela.fragments.SubjectStudentGradesFragment">
+        <action
+            android:id="@+id/action_subjectStudentGradesFragment_to_subjectInfoFragment"
+            app:destination="@id/subjectInfoFragment" />
     </fragment>
 
 </navigation>

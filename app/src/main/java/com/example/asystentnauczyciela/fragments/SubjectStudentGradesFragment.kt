@@ -5,9 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.asystentnauczyciela.R
 
-class StudentsFragment : Fragment() {
+class SubjectStudentGradesFragment : Fragment() {
     //vm
 
     override fun onCreateView(
@@ -17,7 +16,7 @@ class StudentsFragment : Fragment() {
     ): View? {
         //vm init
 
-        return inflater.inflate(R.layout.fragment_students,container,false)
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

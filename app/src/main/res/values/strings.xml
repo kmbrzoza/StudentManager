@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">AsystentNauczyciela</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="additional">Dodatkowe Ustawienia</string>
     <string name="subjects">Lista przedmiotów</string>
-    <string name="students">Lista studentów</string>
     <string name="main_welcome">Witaj nauczycielu!</string>
+    <string name="back">Wróć</string>
+    <string name="new_student">Nowy student</string>
+    <string name="new_subject">Nowy przedmiot</string>
+    <string name="subject_info">Informacje o przedmiocie</string>
+    <string name="student_grades">Oceny studenta</string>
+    <string name="new_grade">Nowa ocena</string>
+    <string name="subject_name">Nazwa przedmiotu</string>
+    <string name="subject_day">Dzień</string>
+    <string name="subject_start_hour">Godzina rozpoczęcia</string>
+    <string name="subject_end_hour">Godzina zakończenia</string>
+    <string name="student_first_name">Imię</string>
+    <string name="student_last_name">Nazwisko</string>
+    <string name="add_student">Dodaj studenta</string>
+    <string name="add_subject">Dodaj przedmiot</string>
 </resources>
