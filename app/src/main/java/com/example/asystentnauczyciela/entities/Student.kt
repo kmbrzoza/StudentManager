@@ -4,15 +4,15 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Students")
+@Entity(tableName = "students")
 data class Student(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "AlbumNumber")
-    val albumNumber: Long,
-
-    @ColumnInfo(name = "FirstName")
+    @ColumnInfo(name = "firstName")
     var firstName: String,
 
-    @ColumnInfo(name = "LastName")
+    @ColumnInfo(name = "lastName")
     var lastName: String
-)
+) {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "albumNumber")
+    var albumNumber: Long = 0L
+}

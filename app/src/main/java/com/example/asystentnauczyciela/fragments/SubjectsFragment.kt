@@ -6,23 +6,40 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.asystentnauczyciela.R
+import com.example.asystentnauczyciela.adapters.SubjectsListAdapter
+import com.example.asystentnauczyciela.viewmodels.SubjectsViewModel
 
 class SubjectsFragment : Fragment() {
-    //vm
+    lateinit var viewModel: SubjectsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //vm init
         return inflater.inflate(R.layout.fragment_subjects, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(requireActivity()).get(SubjectsViewModel::class.java)
+
+        val subjectsListAdapter = SubjectsListAdapter(viewModel.subjects)
+        viewModel.subjects.observe(viewLifecycleOwner, {
+            subjectsListAdapter.notifyDataSetChanged()
+        })
+
+        val layoutManager = LinearLayoutManager(view.context)
+        view.findViewById<RecyclerView>(R.id.subjects_list).let {
+            it.adapter = subjectsListAdapter
+            it.layoutManager = layoutManager
+        }
 
         view.findViewById<Button>(R.id.button_subjects_back).apply {
             setOnClickListener {

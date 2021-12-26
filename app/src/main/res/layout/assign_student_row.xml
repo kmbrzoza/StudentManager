@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/assign_student_row_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="23sp" />
+
+    <TextView
+        android:id="@+id/assign_student_row_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/button_assign_student_row"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:drawableLeft="@android:drawable/ic_input_add" />
+</LinearLayout>

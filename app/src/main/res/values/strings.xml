@@ -18,4 +18,5 @@
     <string name="student_last_name">Nazwisko</string>
     <string name="add_student">Dodaj studenta</string>
     <string name="add_subject">Dodaj przedmiot</string>
+    <string name="assign_students">Przypisz studentów</string>
 </resources>

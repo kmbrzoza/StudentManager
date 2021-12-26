@@ -7,7 +7,6 @@ import androidx.room.Relation
 data class SubjectWithStudents(
     @Embedded
     val subject: Subject,
-
     @Relation(
         parentColumn = "subjectId",
         entityColumn = "albumNumber",

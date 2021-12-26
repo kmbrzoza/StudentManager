@@ -76,6 +76,10 @@
         <action
             android:id="@+id/action_subjectInfoFragment_to_subjectStudentGradesFragment"
             app:destination="@id/subjectStudentGradesFragment" />
+
+        <action
+            android:id="@+id/action_subjectInfoFragment_to_assignStudentToSubjectFragment"
+            app:destination="@id/assignStudentToSubjectFragment" />
     </fragment>
 
     <!--    SUBJECT STUDENT GRADES   -->
@@ -84,6 +88,15 @@
         android:name="com.example.asystentnauczyciela.fragments.SubjectStudentGradesFragment">
         <action
             android:id="@+id/action_subjectStudentGradesFragment_to_subjectInfoFragment"
+            app:destination="@id/subjectInfoFragment" />
+    </fragment>
+
+    <!--    ASSIGN STUDENT TO SUBJECT   -->
+    <fragment
+        android:id="@+id/assignStudentToSubjectFragment"
+        android:name="com.example.asystentnauczyciela.fragments.AssignStudentsToSubjectFragment">
+        <action
+            android:id="@+id/action_assignStudentToSubjectFragment_to_subjectInfoFragment"
             app:destination="@id/subjectInfoFragment" />
     </fragment>
 

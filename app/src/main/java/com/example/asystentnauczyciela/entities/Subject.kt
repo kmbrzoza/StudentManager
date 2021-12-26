@@ -4,21 +4,27 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Subjects")
+@Entity(tableName = "subjects")
 data class Subject(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "Id")
-    val id: Long,
-
-    @ColumnInfo(name = "Name")
+    @ColumnInfo(name = "name")
     var name: String,
 
-    @ColumnInfo(name = "Day")
+    @ColumnInfo(name = "day")
     var day: String,
 
-    @ColumnInfo(name = "StartHour")
+    @ColumnInfo(name = "startHour")
     var startHour: String,
 
-    @ColumnInfo(name = "EndHour")
-    var endtHour: String
-)
+    @ColumnInfo(name = "startMin")
+    var startMin: String,
+
+    @ColumnInfo(name = "endHour")
+    var endHour: String,
+
+    @ColumnInfo(name = "endMin")
+    var endMin: String
+) {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "subjectId")
+    var subjectId: Long = 0L
+}

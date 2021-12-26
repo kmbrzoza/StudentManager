@@ -39,18 +39,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/add_subject_name" />
 
+    <TextView
+        android:id="@+id/add_subject_start_hour_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/subject_start_hour"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@id/add_subject_end_hour_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_subject_day" />
+
+    <TextView
+        android:id="@+id/add_subject_end_hour_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/subject_end_hour"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/add_subject_start_hour_text"
+        app:layout_constraintTop_toBottomOf="@id/add_subject_day" />
+
     <EditText
         android:id="@+id/add_subject_start_hour"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:hint="@string/subject_start_hour"
+        android:layout_marginEnd="5dp"
+        android:hint="hh"
         android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/add_subject_end_hour"
+        app:layout_constraintEnd_toStartOf="@+id/add_subject_start_min"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_subject_day" />
+        app:layout_constraintTop_toBottomOf="@id/add_subject_start_hour_text" />
+
+    <EditText
+        android:id="@+id/add_subject_start_min"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="mm"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@id/add_subject_end_hour"
+        app:layout_constraintStart_toEndOf="@+id/add_subject_start_hour"
+        app:layout_constraintTop_toBottomOf="@id/add_subject_start_hour_text" />
 
     <EditText
         android:id="@+id/add_subject_end_hour"
@@ -58,12 +99,25 @@
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="hh"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/add_subject_end_min"
+        app:layout_constraintStart_toEndOf="@+id/add_subject_start_min"
+        app:layout_constraintTop_toBottomOf="@id/add_subject_end_hour_text" />
+
+    <EditText
+        android:id="@+id/add_subject_end_min"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:hint="@string/subject_end_hour"
+        android:hint="mm"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/add_subject_start_hour"
-        app:layout_constraintTop_toBottomOf="@id/add_subject_day" />
+        app:layout_constraintStart_toEndOf="@+id/add_subject_end_hour"
+        app:layout_constraintTop_toBottomOf="@id/add_subject_end_hour_text" />
 
 
     <Button
