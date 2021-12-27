@@ -1,6 +1,5 @@
 package com.example.asystentnauczyciela.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,10 +16,10 @@ class SubjectsListAdapter(private val subjects: LiveData<List<Subject>>) :
     RecyclerView.Adapter<SubjectsListAdapter.SubjectsListHolder>() {
 
     inner class SubjectsListHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textViewSubjectName = view.findViewById<TextView>(R.id.subject_row_name)
-        val textViewSubjectDay = view.findViewById<TextView>(R.id.subject_row_day)
-        val textViewSubjectHours = view.findViewById<TextView>(R.id.subject_row_hours)
-        val buttonInfo = view.findViewById<Button>(R.id.subject_row_info)
+        val textViewSubjectName: TextView = view.findViewById<TextView>(R.id.subject_row_name)
+        val textViewSubjectDay: TextView = view.findViewById<TextView>(R.id.subject_row_day)
+        val textViewSubjectHours: TextView = view.findViewById<TextView>(R.id.subject_row_hours)
+        val buttonInfo: Button = view.findViewById<Button>(R.id.subject_row_info)
 
         fun navigateToSubjectInfo(subjectId: Long) {
             val bundle = bundleOf(Pair("subjectId", subjectId))
@@ -41,10 +40,7 @@ class SubjectsListAdapter(private val subjects: LiveData<List<Subject>>) :
 
         holder.textViewSubjectName.text = subject?.name
         holder.textViewSubjectDay.text = subject?.day
-
-        val hours =
-            "${subject?.startHour}:${subject?.startMin} - ${subject?.endHour}:${subject?.endMin}"
-        holder.textViewSubjectHours.text = hours
+        holder.textViewSubjectHours.text = subject?.getBeautifyRangeOfHours()
 
         holder.buttonInfo.setOnClickListener {
             holder.navigateToSubjectInfo(subject?.subjectId ?: 0)

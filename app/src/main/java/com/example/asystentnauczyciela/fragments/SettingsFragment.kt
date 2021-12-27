@@ -22,9 +22,8 @@ class SettingsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val factory = SettingsViewModelFactory((requireNotNull(this.activity).application))
-        viewModel = ViewModelProvider(this, factory).get(SettingsViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity(), factory).get(SettingsViewModel::class.java)
 
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
@@ -56,15 +55,13 @@ class SettingsFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_settings_remove_all).apply {
             setOnClickListener {
-                val dialog = OwnDialog(
-                    getResources().getString(R.string.msg_remove_students_and_subjects)
-                ) {
-                    viewModel.removeAll()
-                    Toast.makeText(
-                        activity, "Pomyślnie usunięto studentów i przedmioty",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
+                val dialog =
+                    OwnDialog(getResources().getString(R.string.msg_remove_students_and_subjects)) {
+                        viewModel.removeAll()
+                        Toast.makeText(
+                            activity, "Pomyślnie usunięto studentów i przedmioty", Toast.LENGTH_LONG
+                        ).show()
+                    }
                 dialog.show(childFragmentManager, null)
             }
         }

@@ -36,8 +36,7 @@ class SubjectInfoFragment : Fragment() {
 
         val factory =
             SubjectInfoViewModelFactory((requireNotNull(this.activity).application), subjectId)
-        viewModel = ViewModelProvider(this, factory)
-            .get(SubjectInfoViewModel::class.java)
+        viewModel = ViewModelProvider(this, factory).get(SubjectInfoViewModel::class.java)
 
         return inflater.inflate(R.layout.fragment_subject_info, container, false)
     }
@@ -62,6 +61,7 @@ class SubjectInfoFragment : Fragment() {
                 backToSubjects()
             }
         }
+
         view.findViewById<Button>(R.id.button_assign_student).apply {
             setOnClickListener {
                 val bundle = bundleOf(Pair("subjectId", viewModel.subjectId))
@@ -80,9 +80,9 @@ class SubjectInfoFragment : Fragment() {
     private fun setSubjectInView(view: View, subject: Subject?) {
         view.findViewById<TextView>(R.id.subject_info_name).setText(subject?.name)
         view.findViewById<TextView>(R.id.subject_info_day).setText(subject?.day)
-        val startHour = "${subject?.startHour}:${subject?.startMin}"
-        view.findViewById<TextView>(R.id.subject_info_start_hour).setText(startHour)
-        val endHour = "${subject?.endHour}:${subject?.endMin}"
-        view.findViewById<TextView>(R.id.subject_info_end_hour).setText(endHour)
+        view.findViewById<TextView>(R.id.subject_info_start_hour)
+            .setText(subject?.getBeautifyStartHours())
+        view.findViewById<TextView>(R.id.subject_info_end_hour)
+            .setText(subject?.getBeautifyEndHours())
     }
 }

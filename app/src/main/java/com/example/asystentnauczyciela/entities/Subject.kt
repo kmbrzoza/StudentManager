@@ -13,18 +13,26 @@ data class Subject(
     var day: String,
 
     @ColumnInfo(name = "startHour")
-    var startHour: String,
+    var startHour: Int,
 
     @ColumnInfo(name = "startMin")
-    var startMin: String,
+    var startMin: Int,
 
     @ColumnInfo(name = "endHour")
-    var endHour: String,
+    var endHour: Int,
 
     @ColumnInfo(name = "endMin")
-    var endMin: String
+    var endMin: Int
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "subjectId")
     var subjectId: Long = 0L
+
+    fun getBeautifyStartHours(): String =
+        "${String.format("%02d", startHour)}:${String.format("%02d", startMin)}"
+
+    fun getBeautifyEndHours(): String =
+        "${String.format("%02d", endHour)}:${String.format("%02d", endMin)}"
+
+    fun getBeautifyRangeOfHours(): String = "${getBeautifyStartHours()} - ${getBeautifyEndHours()}"
 }

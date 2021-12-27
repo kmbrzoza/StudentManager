@@ -22,9 +22,6 @@ interface SubjectsDAO {
     @Query("SELECT * FROM Subject WHERE SubjectId = :subjectId LIMIT 1")
     fun getSubject(subjectId: Long): LiveData<Subject>
 
-    @Query("SELECT * FROM Student as s INNER JOIN SubjectStudent as ss ON s.albumNumber = ss.albumNumber WHERE ss.subjectId = :subjectId")
-    fun getStudentsForSubject(subjectId: Long): LiveData<List<Student>>
-
     @Transaction
     @Query("SELECT * FROM Subject WHERE subjectId = :subjectId LIMIT 1")
     fun getSubjectWithStudents(subjectId: Long): LiveData<SubjectWithStudents>

@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asystentnauczyciela.R
 import com.example.asystentnauczyciela.adapters.AssignStudentsToSubjectListAdapter
-import com.example.asystentnauczyciela.adapters.SubjectStudentsListAdapter
 import com.example.asystentnauczyciela.factories.AssignStudentsToSubjectViewModelFactory
 import com.example.asystentnauczyciela.viewmodels.AssignStudentsToSubjectViewModel
 

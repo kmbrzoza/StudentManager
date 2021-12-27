@@ -16,11 +16,11 @@ class SubjectStudentsListAdapter(private val subjectWithStudents: LiveData<Subje
     RecyclerView.Adapter<SubjectStudentsListAdapter.SubjectStudentsListHolder>() {
 
     inner class SubjectStudentsListHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textViewStudentFirstName =
+        val textViewStudentFirstName: TextView =
             view.findViewById<TextView>(R.id.subject_student_row_first_name)
-        val textViewStudentLastName =
+        val textViewStudentLastName: TextView =
             view.findViewById<TextView>(R.id.subject_student_row_last_name)
-        val buttonStudentGradesInfo =
+        val buttonStudentGradesInfo: Button =
             view.findViewById<Button>(R.id.subject_student_row_grades_info)
 
         fun navigateToSubjectStudentGrades(albumNumber: Long?, subjectId: Long?) {
@@ -43,7 +43,6 @@ class SubjectStudentsListAdapter(private val subjectWithStudents: LiveData<Subje
 
         holder.textViewStudentFirstName.text = student?.firstName
         holder.textViewStudentLastName.text = student?.lastName
-
 
         holder.buttonStudentGradesInfo.setOnClickListener {
             holder.navigateToSubjectStudentGrades(student?.albumNumber, subjectId)

@@ -3,7 +3,6 @@ package com.example.asystentnauczyciela.helpers
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.asystentnauczyciela.R

@@ -14,19 +14,12 @@ class SubjectStudentGradesListAdapter(private val grades: LiveData<List<Grade>>)
 
     inner class SubjectStudentGradesListHolder(private val view: View) :
         RecyclerView.ViewHolder(view) {
-        val textViewSubjectStudentGradeGrade =
+        val textViewSubjectStudentGradeGrade: TextView =
             view.findViewById<TextView>(R.id.subject_student_grade_row_grade)
-        val textViewSubjectStudentGradeWeight =
+        val textViewSubjectStudentGradeWeight: TextView =
             view.findViewById<TextView>(R.id.subject_student_grade_row_weight)
-        val textViewSubjectStudentGradeDescription =
+        val textViewSubjectStudentGradeDescription: TextView =
             view.findViewById<TextView>(R.id.subject_student_grade_row_description)
-
-//        fun navigateToAddSubjectStudentGrades(albumNumber: Long) {
-//            val bundle = bundleOf(Pair("albumNumber", albumNumber))
-//            //TODO
-//            view.findNavController()
-//                .navigate(R.id.action_subjectInfoFragment_to_subjectStudentGradesFragment, bundle)
-//        }
     }
 
     override fun onCreateViewHolder(

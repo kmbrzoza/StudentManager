@@ -1,7 +1,6 @@
 package com.example.asystentnauczyciela.fragments
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +14,6 @@ import androidx.navigation.findNavController
 import com.example.asystentnauczyciela.R
 import com.example.asystentnauczyciela.entities.Student
 import com.example.asystentnauczyciela.viewmodels.AddStudentViewModel
-import com.example.asystentnauczyciela.viewmodels.SubjectsViewModel
 
 class AddStudentFragment : Fragment() {
     lateinit var viewModel: AddStudentViewModel
@@ -25,13 +23,13 @@ class AddStudentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewModel = ViewModelProvider(requireActivity()).get(AddStudentViewModel::class.java)
+
         return inflater.inflate(R.layout.fragment_add_student, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(requireActivity()).get(AddStudentViewModel::class.java)
 
         view.findViewById<Button>(R.id.button_add_student_back).apply {
             setOnClickListener {

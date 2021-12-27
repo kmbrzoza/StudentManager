@@ -8,7 +8,6 @@ import com.example.asystentnauczyciela.database.ManagerDatabase
 import com.example.asystentnauczyciela.entities.Student
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.lang.Exception
 
 class AddStudentViewModel(application: Application) : AndroidViewModel(application) {
     private val studentsDAO: StudentsDAO = ManagerDatabase.getInstance(application).studentsDAO

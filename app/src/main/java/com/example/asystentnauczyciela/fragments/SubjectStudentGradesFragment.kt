@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.os.bundleOf
@@ -16,7 +15,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asystentnauczyciela.R
 import com.example.asystentnauczyciela.adapters.SubjectStudentGradesListAdapter
-import com.example.asystentnauczyciela.entities.Grade
 import com.example.asystentnauczyciela.entities.Student
 import com.example.asystentnauczyciela.factories.SubjectStudentGradesViewModelFactory
 import com.example.asystentnauczyciela.viewmodels.SubjectStudentGradesViewModel
@@ -82,10 +80,7 @@ class SubjectStudentGradesFragment : Fragment() {
                 )
 
                 view.findNavController()
-                    .navigate(
-                        R.id.action_subjectStudentGradesFragment_to_addGradeFragment,
-                        bundle
-                    )
+                    .navigate(R.id.action_subjectStudentGradesFragment_to_addGradeFragment, bundle)
             }
         }
     }
@@ -97,10 +92,7 @@ class SubjectStudentGradesFragment : Fragment() {
             ?.navigate(R.id.action_subjectStudentGradesFragment_to_subjectInfoFragment, bundle)
     }
 
-    private fun setStudentInfoInView(
-        view: View,
-        student: Student?
-    ) {
+    private fun setStudentInfoInView(view: View, student: Student?) {
         view.findViewById<TextView>(R.id.subject_student_grades_first_name).text =
             student?.firstName
         view.findViewById<TextView>(R.id.subject_student_grades_last_name).text =

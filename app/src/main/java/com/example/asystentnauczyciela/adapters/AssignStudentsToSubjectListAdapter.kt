@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.example.asystentnauczyciela.R
@@ -18,11 +17,11 @@ class AssignStudentsToSubjectListAdapter(
 ) : RecyclerView.Adapter<AssignStudentsToSubjectListAdapter.AssignStudentsToSubjectListHolder>() {
     inner class AssignStudentsToSubjectListHolder(private val view: View) :
         RecyclerView.ViewHolder(view) {
-        val textViewAssignStudentStudentFirstName =
+        val textViewAssignStudentStudentFirstName: TextView =
             view.findViewById<TextView>(R.id.assign_student_row_first_name)
-        val textViewAssignStudentStudentLastName =
+        val textViewAssignStudentStudentLastName: TextView =
             view.findViewById<TextView>(R.id.assign_student_row_last_name)
-        val buttonAssignStudent =
+        val buttonAssignStudent: Button =
             view.findViewById<Button>(R.id.button_assign_student_row)
     }
 
@@ -41,9 +40,7 @@ class AssignStudentsToSubjectListAdapter(
         holder.textViewAssignStudentStudentFirstName.text = student?.firstName
         holder.textViewAssignStudentStudentLastName.text = student?.lastName
 
-
         holder.buttonAssignStudent.setOnClickListener {
-            //TODO PRZYPISAC
             student?.let {
                 viewModel.assignStudentToSubject(it)
             }

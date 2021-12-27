@@ -22,13 +22,13 @@ class SubjectsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewModel = ViewModelProvider(requireActivity()).get(SubjectsViewModel::class.java)
+
         return inflater.inflate(R.layout.fragment_subjects, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel = ViewModelProvider(requireActivity()).get(SubjectsViewModel::class.java)
 
         val subjectsListAdapter = SubjectsListAdapter(viewModel.subjects)
         viewModel.subjects.observe(viewLifecycleOwner, {
