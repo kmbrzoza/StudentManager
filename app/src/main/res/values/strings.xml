@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AsystentNauczyciela</string>
+    <string name="app_name">Asystent Nauczyciela</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="additional">Dodatkowe Ustawienia</string>
     <string name="subjects">Lista przedmiotów</string>
@@ -35,4 +35,5 @@
     <string name="msg_remove_students">Czy chcesz usunąć studentów?</string>
     <string name="msg_remove_subjects">Czy chcesz usunąć przedmioty?</string>
     <string name="msg_remove_students_and_subjects">Czy chcesz usunąć studentów i przedmioty?</string>
+    <string name="hours">Godziny</string>
 </resources>

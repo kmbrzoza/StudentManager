@@ -17,6 +17,8 @@
                 android:id="@+id/subject_row_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
                 android:textSize="23sp" />
         </TableRow>
 
@@ -24,13 +26,13 @@
 
             <TextView
                 android:id="@+id/subject_row_day"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/subject_row_hours"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.4" />
         </TableRow>

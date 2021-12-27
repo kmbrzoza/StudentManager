@@ -39,47 +39,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subject_info_name" />
 
-
-    <LinearLayout
-        android:id="@+id/subject_info_hours"
+    <TextView
+        android:id="@+id/subject_info_range_of_hours"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:hint="@string/hours"
+        android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subject_info_day">
+        app:layout_constraintTop_toBottomOf="@id/subject_info_day" />
 
-        <TextView
-            android:id="@+id/subject_info_start_hour"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:hint="@string/subject_start_hour"
-            android:textAlignment="center"
-            android:textSize="21sp"
-            app:layout_constraintEnd_toStartOf="@+id/subject_info_end_hour"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subject_info_day" />
-
-        <TextView
-            android:id="@+id/subject_info_end_hour"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_weight="1"
-            android:hint="@string/subject_end_hour"
-            android:textAlignment="center"
-            android:textSize="21sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/subject_info_start_hour"
-            app:layout_constraintTop_toBottomOf="@id/subject_info_day" />
-
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/subject_students_list"
@@ -90,7 +63,7 @@
         app:layout_constraintBottom_toTopOf="@id/subject_info_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subject_info_hours" />
+        app:layout_constraintTop_toBottomOf="@id/subject_info_range_of_hours" />
 
     <LinearLayout
         android:id="@+id/subject_info_buttons"

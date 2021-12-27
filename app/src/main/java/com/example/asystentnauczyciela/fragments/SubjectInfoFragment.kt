@@ -80,9 +80,7 @@ class SubjectInfoFragment : Fragment() {
     private fun setSubjectInView(view: View, subject: Subject?) {
         view.findViewById<TextView>(R.id.subject_info_name).setText(subject?.name)
         view.findViewById<TextView>(R.id.subject_info_day).setText(subject?.day)
-        view.findViewById<TextView>(R.id.subject_info_start_hour)
-            .setText(subject?.getBeautifyStartHours())
-        view.findViewById<TextView>(R.id.subject_info_end_hour)
-            .setText(subject?.getBeautifyEndHours())
+        view.findViewById<TextView>(R.id.subject_info_range_of_hours)
+            .setText(subject?.getBeautifyRangeOfHours())
     }
 }

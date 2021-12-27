@@ -103,6 +103,6 @@ class SubjectStudentGradesFragment : Fragment() {
 
     private fun setGradesAverageInfoInView(view: View, gradesAverage: Float) {
         view.findViewById<TextView>(R.id.subject_student_grades_grade_average).text =
-            "${getResources().getString(R.string.grade_average)} ${gradesAverage.toString()}"
+            "${getResources().getString(R.string.grade_average)}: ${gradesAverage.toString()}"
     }
 }

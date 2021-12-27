@@ -67,7 +67,7 @@
         android:id="@+id/subject_student_grades_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="10dp"
         app:layout_constraintBottom_toTopOf="@id/subject_student_grades_buttons"
         app:layout_constraintEnd_toEndOf="parent"
