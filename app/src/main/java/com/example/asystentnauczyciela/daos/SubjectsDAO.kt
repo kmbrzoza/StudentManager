@@ -16,16 +16,16 @@ interface SubjectsDAO {
     @Delete
     fun removeSubject(subject: Subject)
 
-    @Query("SELECT * FROM Subjects")
+    @Query("SELECT * FROM Subject")
     fun getAllSubjects(): LiveData<List<Subject>>
 
-    @Query("SELECT * FROM Subjects WHERE SubjectId = :subjectId LIMIT 1")
+    @Query("SELECT * FROM Subject WHERE SubjectId = :subjectId LIMIT 1")
     fun getSubject(subjectId: Long): LiveData<Subject>
 
-    @Query("SELECT * FROM students as s INNER JOIN StudentSubject as ss ON s.albumNumber = ss.albumNumber WHERE ss.subjectId = (:subjectId)")
+    @Query("SELECT * FROM Student as s INNER JOIN SubjectStudent as ss ON s.albumNumber = ss.albumNumber WHERE ss.subjectId = :subjectId")
     fun getStudentsForSubject(subjectId: Long): LiveData<List<Student>>
 
     @Transaction
-    @Query("SELECT * FROM subjects WHERE subjectId = :subjectId LIMIT 1")
+    @Query("SELECT * FROM Subject WHERE subjectId = :subjectId LIMIT 1")
     fun getSubjectWithStudents(subjectId: Long): LiveData<SubjectWithStudents>
 }

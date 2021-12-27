@@ -19,4 +19,10 @@
     <string name="add_student">Dodaj studenta</string>
     <string name="add_subject">Dodaj przedmiot</string>
     <string name="assign_students">Przypisz studentów</string>
+    <string name="album_number">Numer albumu</string>
+    <string name="grade_average">Średnia ocen</string>
+    <string name="add_grade">Dodaj ocenę</string>
+    <string name="grade">Ocena</string>
+    <string name="weight">Waga</string>
+    <string name="description">Opis</string>
 </resources>

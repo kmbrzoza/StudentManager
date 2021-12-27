@@ -15,12 +15,15 @@ interface StudentsDAO {
     @Delete
     fun removeStudent(student: Student)
 
-    @Query("SELECT * FROM Students")
+    @Query("SELECT * FROM Student")
     fun getAllStudents(): LiveData<List<Student>>
 
-    @Query("SELECT * FROM students as s WHERE NOT EXISTS(SELECT 1 FROM StudentSubject as sub WHERE sub.subjectId=(:subjectId) AND sub.albumNumber = s.albumNumber)")
+    @Query("SELECT * FROM Student WHERE albumNumber = :albumNumber")
+    fun getStudent(albumNumber: Long): LiveData<Student>
+
+    @Query("SELECT * FROM Student as s WHERE NOT EXISTS(SELECT 1 FROM SubjectStudent as sub WHERE sub.subjectId = :subjectId AND sub.albumNumber = s.albumNumber)")
     fun getStudentsThatDontBelongToSubject(subjectId: Long): LiveData<List<Student>>
 
-    @Query("INSERT INTO StudentSubject (albumNumber, subjectId) VALUES (:albumNumber, :subjectId)")
+    @Query("INSERT INTO SubjectStudent (albumNumber, subjectId) VALUES (:albumNumber, :subjectId)")
     fun assignStudentToSubject(albumNumber: Long, subjectId: Long)
 }

@@ -23,11 +23,11 @@ class SubjectStudentsListAdapter(private val subjectWithStudents: LiveData<Subje
         val buttonStudentGradesInfo =
             view.findViewById<Button>(R.id.subject_student_row_grades_info)
 
-        fun navigateToSubjectStudentGrades(albumNumber: Long) {
-            val bundle = bundleOf(Pair("albumNumber", albumNumber))
+        fun navigateToSubjectStudentGrades(albumNumber: Long?, subjectId: Long?) {
+            val bundle = bundleOf(Pair("albumNumber", albumNumber), Pair("subjectId", subjectId))
 
             view.findNavController()
-                .navigate(R.id.action_subjectsFragment_to_subjectInfoFragment, bundle)
+                .navigate(R.id.action_subjectInfoFragment_to_subjectStudentGradesFragment, bundle)
         }
     }
 
@@ -38,6 +38,7 @@ class SubjectStudentsListAdapter(private val subjectWithStudents: LiveData<Subje
     }
 
     override fun onBindViewHolder(holder: SubjectStudentsListHolder, position: Int) {
+        val subjectId = subjectWithStudents.value?.subject?.subjectId
         val student = subjectWithStudents.value?.students?.get(position)
 
         holder.textViewStudentFirstName.text = student?.firstName
@@ -45,7 +46,7 @@ class SubjectStudentsListAdapter(private val subjectWithStudents: LiveData<Subje
 
 
         holder.buttonStudentGradesInfo.setOnClickListener {
-            holder.navigateToSubjectStudentGrades(student?.albumNumber ?: 0)
+            holder.navigateToSubjectStudentGrades(student?.albumNumber, subjectId)
         }
     }
 

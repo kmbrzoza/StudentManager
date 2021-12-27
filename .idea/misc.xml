@@ -7,6 +7,7 @@
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/add_student_fragment.xml" value="0.3546875" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/add_subject_fragment.xml" value="0.3546875" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/assign_student_row.xml" value="0.33" />
+        <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_add_grade.xml" value="0.33" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_add_student.xml" value="0.49583333333333335" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_add_subject.xml" value="0.49583333333333335" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_assign_student_to_subject.xml" value="0.4953125" />
@@ -16,7 +17,7 @@
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_settings.xml" value="0.35572916666666665" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_student_info.xml" value="0.33" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_students.xml" value="0.33" />
-        <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_subject_info.xml" value="0.5" />
+        <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_subject_info.xml" value="0.33" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_subject_student_grades.xml" value="0.35572916666666665" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_subject_student_info.xml" value="0.49583333333333335" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/fragment_subjects.xml" value="0.33" />
@@ -26,6 +27,7 @@
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/students_fragment.xml" value="0.3546875" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subject_info_fragment.xml" value="0.3546875" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subject_row.xml" value="0.49583333333333335" />
+        <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subject_student_grade_row.xml" value="0.5" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subject_student_info_fragment.xml" value="0.3546875" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subject_student_row.xml" value="0.4953125" />
         <entry key="..\:/STUDIA/3 ROK/Aplikacje mobilne dla systemu android/Projekt_AsystentNauczyciela/app/src/main/res/layout/subjects_fragment.xml" value="0.3546875" />

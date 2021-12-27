@@ -15,72 +15,97 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/subject_student_grades_first_name"
+    <TextView
+        android:id="@+id/subject_student_grades_album_number"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:autofillHints="name"
-        android:focusable="false"
-        android:inputType="text"
-        android:labelFor="@id/subject_student_grades_first_name"
-        android:text="First Name"
+        android:hint="@string/album_number"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subject_student_grades_text" />
 
-    <EditText
-        android:id="@+id/subject_student_grades_last_name"
+    <TextView
+        android:id="@+id/subject_student_grades_first_name"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:autofillHints="name"
-        android:focusable="false"
-        android:inputType="text"
-        android:labelFor="@id/subject_student_grades_last_name"
-        android:text="Last Name"
+        android:hint="@string/student_first_name"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subject_student_grades_album_number" />
+
+    <TextView
+        android:id="@+id/subject_student_grades_last_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/student_last_name"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subject_student_grades_first_name" />
 
-    <EditText
-        android:id="@+id/subject_student_grades_album_number"
+    <TextView
+        android:id="@+id/subject_student_grades_grade_average"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:autofillHints="name"
-        android:focusable="false"
-        android:inputType="number"
-        android:labelFor="@id/subject_student_grades_album_number"
-        android:text="Album number"
+        android:hint="@string/grade_average"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subject_student_grades_last_name" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subject_student_grades_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/subject_student_grades_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subject_student_grades_grade_average" />
 
-    <Button
-        android:id="@+id/button_subject_student_grades_back"
+    <LinearLayout
+        android:id="@+id/subject_student_grades_buttons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="5dp"
-        android:text="@string/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button_add_grade"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button_add_grade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/new_grade"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button_subject_student_grades_back" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_subject_student_grades_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_subject_student_grades_new_grade"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_subject_student_grades_new_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/new_grade"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_subject_student_grades_back" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

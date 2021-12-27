@@ -10,7 +10,7 @@ data class SubjectWithStudents(
     @Relation(
         parentColumn = "subjectId",
         entityColumn = "albumNumber",
-        associateBy = Junction(StudentSubjectCrossRef::class)
+        associateBy = Junction(SubjectStudent::class)
     )
     val students: List<Student>
 )
