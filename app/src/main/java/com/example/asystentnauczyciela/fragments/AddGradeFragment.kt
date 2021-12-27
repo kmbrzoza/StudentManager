@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -14,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.asystentnauczyciela.R
 import com.example.asystentnauczyciela.entities.Grade
-import com.example.asystentnauczyciela.entities.Student
 import com.example.asystentnauczyciela.factories.AddGradeViewModelFactory
 import com.example.asystentnauczyciela.viewmodels.AddGradeViewModel
 

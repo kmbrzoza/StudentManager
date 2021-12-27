@@ -12,11 +12,8 @@ interface StudentsDAO {
     @Insert
     fun addStudent(student: Student)
 
-    @Delete
-    fun removeStudent(student: Student)
-
-    @Query("SELECT * FROM Student")
-    fun getAllStudents(): LiveData<List<Student>>
+    @Query("DELETE FROM Student")
+    fun removeStudents()
 
     @Query("SELECT * FROM Student WHERE albumNumber = :albumNumber")
     fun getStudent(albumNumber: Long): LiveData<Student>

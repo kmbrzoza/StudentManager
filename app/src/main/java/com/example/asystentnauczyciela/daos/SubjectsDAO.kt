@@ -13,8 +13,8 @@ interface SubjectsDAO {
     @Insert
     fun addSubject(subject: Subject)
 
-    @Delete
-    fun removeSubject(subject: Subject)
+    @Query("DELETE FROM Subject")
+    fun removeSubjects()
 
     @Query("SELECT * FROM Subject")
     fun getAllSubjects(): LiveData<List<Subject>>
@@ -28,4 +28,7 @@ interface SubjectsDAO {
     @Transaction
     @Query("SELECT * FROM Subject WHERE subjectId = :subjectId LIMIT 1")
     fun getSubjectWithStudents(subjectId: Long): LiveData<SubjectWithStudents>
+
+    @Query("DELETE FROM SubjectStudent")
+    fun removeSubjectStudent()
 }

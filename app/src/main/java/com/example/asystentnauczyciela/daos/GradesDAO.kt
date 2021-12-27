@@ -12,6 +12,9 @@ interface GradesDAO {
     @Insert
     fun addGrade(grade: Grade)
 
+    @Query("DELETE FROM Grade")
+    fun removeGrades()
+
     @Query("SELECT subjectStudentId FROM SubjectStudent WHERE subjectId = :subjectId AND albumNumber = :albumNumber")
     fun getSubjectStudentId(subjectId: Long, albumNumber: Long): LiveData<Long>
 
