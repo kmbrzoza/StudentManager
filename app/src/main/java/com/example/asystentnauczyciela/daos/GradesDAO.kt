@@ -15,9 +15,6 @@ interface GradesDAO {
     @Query("DELETE FROM Grade")
     fun removeGrades()
 
-    @Query("SELECT subjectStudentId FROM SubjectStudent WHERE subjectId = :subjectId AND albumNumber = :albumNumber")
-    fun getSubjectStudentId(subjectId: Long, albumNumber: Long): LiveData<Long>
-
     @Transaction
     @Query("SELECT * FROM Grade WHERE subjectId = :subjectId AND albumNumber = :albumNumber")
     fun getGradesForSubjectStudent(subjectId: Long, albumNumber: Long): LiveData<List<Grade>>

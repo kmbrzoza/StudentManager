@@ -14,7 +14,7 @@ import com.example.asystentnauczyciela.entities.Subject
 
 @Database(
     entities = [Student::class, Subject::class, SubjectStudent::class, Grade::class],
-    version = 23,
+    version = 25,
     exportSchema = false
 )
 abstract class ManagerDatabase : RoomDatabase() {
